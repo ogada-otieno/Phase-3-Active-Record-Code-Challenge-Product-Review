@@ -6,5 +6,14 @@ class Product < ActiveRecord::Base
    def leave_review(user, star_rating, comment)
         Review.create(user_id: user.id, star_rating: star_rating, comment: comment)
     end
-    
+   
+   # This should puts in the terminal a string representing each review for this product 
+   def print_all_reviews
+        puts self.reviews.map{|review|"Review for #{review.product.name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"}
+   end
+
+   # Returns a float representing the average star rating for all reviews for this product
+   def average_rating
+        self.reviews.average(:star_rating).to_f
+   end
 end
