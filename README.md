@@ -14,7 +14,34 @@ Note: You should design your domain/Entity Relationship Diagram(ERD) using any U
 ## Entity Relationship Diagram
 ![ER Diagram](./assets/ER_diagram.png)
 
+## Prerequisites
 
+In order to use this repository you will need the following:
+
+- Operating System (Windows 10+, Linux 3.8+, or MacOS X 10.7+)
+- RAM >= 4GB
+- Free Space >= 2GB
+
+## Setup
+You can setup this repository by following this manual
+
+1. Clone the repository
+```bash
+git clone git@github.com:ogada-otieno/Phase-3-Active-Record-Code-Challenge-Product-Review.git
+```
+2. Ensure the ruby gems are setup in your machine
+```bash
+bundle install
+```
+3. Perform any pending database migrations and seed the database with sample data
+```bash
+bundle exec rake db:migrate db:seed
+```
+
+4. Test the various instances of the database
+```bash
+bundle exec rake console
+```
 
 
 ## Topics
