@@ -11,8 +11,9 @@ puts "🌱 Seeding data..."
     rand(1..5).times do
       Review.create(
         product_id: product.id,
+        # user_id: user.id,
         star_rating: rand(1..5),
-        comment: Faker::Lorem.sentence         
+        comment: Faker::Lorem.sentence       
       )
     end
   end
@@ -24,12 +25,12 @@ puts "🌱 Seeding data..."
   end
 
   # User#reviews
-  user1 = User.first
-  review2 = Review.second
-  user1.reviews << review2
+  # user1 = User.first
+  # review2 = Review.second
+  # user1.reviews << review2
 
-  user2 = User.second
-  review1 = Review.first
-  user2.reviews << review1
+  # user2 = User.second
+  # review1 = Review.first
+  # user2.reviews << review1
   
 puts "🌱 Done seeding!"
